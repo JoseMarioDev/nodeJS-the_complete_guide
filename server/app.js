@@ -1,7 +1,7 @@
 const express = require('express'); // installs express
 const app = express(); //sets app to use express. sometimes called server?
 const bodyParser = require('body-parser');
-
+const path = require('path');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
@@ -12,7 +12,7 @@ app.use(shopRoutes);
 
 // 404 middleware to catch all
 app.use((req, res, next) => {
-  res.status(404).send('<h2>Page not found</h2>');
+  res.sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
 // listen on port 3000.  can refactor to use .env like in class eventually
