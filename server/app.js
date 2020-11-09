@@ -4,6 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.set('view engine', 'pug'); // let express know that pug is the template engine we're using
+app.set('views', 'views'); //tells express where our templates are stored.  in views folder
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
