@@ -4,3 +4,4 @@
 - focus on sequelize and how to connect to db
 - how can I implement Postgres w/Sequelize?
 - differences between pug and ejs
+- work on mastering joins
